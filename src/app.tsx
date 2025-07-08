@@ -1,9 +1,15 @@
-import { RouterProvider } from '@/providers'
+import { DatesProvider } from '@mantine/dates'
+
+import { RouterProvider, ThemeProvider } from '@/providers'
 
 function App() {
   return (
     <>
-      <RouterProvider />
+      <ThemeProvider>
+        <DatesProvider settings={{ consistentWeeks: true }}>
+          <RouterProvider />
+        </DatesProvider>
+      </ThemeProvider>
     </>
   )
 }
